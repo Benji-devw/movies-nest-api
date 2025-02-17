@@ -9,4 +9,9 @@ export class MoviesController {
   findAll(): any {
     return this.moviesService.getMovies();
   }
+
+  @Get(':id')
+  findOne(id: number): any {
+    return this.moviesService.getMovie(id);
+  }
 }

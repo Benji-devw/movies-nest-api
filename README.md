@@ -31,6 +31,9 @@ $ npm run start:prod
 ## Run tests
 
 ```bash
+# Url test 
+$ http://localhost:3000/movies/
+
 # unit tests
 $ npm run test
 
