@@ -6,7 +6,7 @@ export class MoviesController {
   constructor(private readonly moviesService: MoviesService) {}
 
   @Get()
-  findAll(): string {
+  findAll(): any {
     return this.moviesService.getMovies();
   }
 }
