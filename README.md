@@ -17,29 +17,31 @@ $ npm install
 ```bash
 # development
 $ npm run start
-
 # watch mode
 $ npm run start:dev
-
 # fix prettier
 npx prettier --write . 
-
 # production mode
 $ npm run start:prod
 ```
 
-## Run tests
+## Prisma setup
 
+```bash
+sudo -u $USER psql
+CREATE DATABASE <db_name>;
+CREATE USER <prisma> WITH ENCRYPTED PASSWORD '<password>';
+GRANT ALL PRIVILEGES ON DATABASE <db_name> TO <prisma>;
+```
+
+## Run tests
 ```bash
 # Url test 
 $ http://localhost:3000/movies/
-
 # unit tests
 $ npm run test
-
 # e2e tests
 $ npm run test:e2e
-
 # test coverage
 $ npm run test:cov
 ```
